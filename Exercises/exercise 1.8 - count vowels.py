@@ -14,14 +14,14 @@ number_of_vowels = number_of_a + \
                    number_of_u + \
                    number_of_y
 
-print("Total number of characters: %d" % len(s))
-
 print("Found the vowel 'a' %d times" % number_of_a)
 print("Found the vowel 'e' %d times" % number_of_e)
 print("Found the vowel 'i' %d times" % number_of_i)
 print("Found the vowel 'o' %d times" % number_of_o)
 print("Found the vowel 'u' %d times" % number_of_u)
 print("Found the vowel 'y' %d times" % number_of_y)
+
+print("Total number of characters: %d" % len(s))
 
 print("Total number of vowels: %d" % number_of_vowels)
 
@@ -37,12 +37,12 @@ print("Total number of vowels: %d" % number_of_vowels)
 
 
 
-number_of_vowels = 0
-vowels = 'aeiouy'
-for vowel in vowels:
-    n = s.count(vowel)
-    number_of_vowels += n
-    print(f'Vowel {vowel} occurs {n} times.')
-
-print(f"Total length: {len(s)}")
-print(f"Total number of vowels: {number_of_vowels}")
+##number_of_vowels = 0
+##vowels = 'aeiouy'
+##for vowel in vowels:
+##    n = s.count(vowel)
+##    number_of_vowels += n
+##    print(f'Vowel {vowel} occurs {n} times.')
+##
+##print(f"Total number of characters: {len(s)}")
+##print(f"Total number of vowels: {number_of_vowels}")

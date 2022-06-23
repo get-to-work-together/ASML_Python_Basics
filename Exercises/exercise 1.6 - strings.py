@@ -11,6 +11,7 @@ print('First three characters:', t[:3])
 print('Ends with a ?:', t.endswith('?'))
 
 print('Snake case:', t.lower().replace(' ', '_'))
+
 print('Pascal case:', t.title().replace(' ', ''))
 print('Camel case:', t[0].lower() + t.title().replace(' ', '')[1:])
 print('Screaming case:', t.upper().replace(' ', '_'))
