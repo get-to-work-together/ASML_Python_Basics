@@ -1,6 +1,6 @@
 import random
 
-required_length = 8
+minimum_length = 0
 n_lowercase = 2
 n_uppercase = 2
 n_numbers = 1
@@ -23,12 +23,16 @@ numbers = random.choices(NUMBER_CHARACTERS,
 special = random.choices(SPECIAL_CHARACTERS,
                          k = n_special)
 
-extra = random.choices(LOWERCASE_CHARACTERS +
-                       UPPERCASE_CHARACTERS +
-                       NUMBER_CHARACTERS +
-                       SPECIAL_CHARACTERS,
-                       k = required_length - n_lowercase - n_uppercase - n_numbers - n_special)
-
+n_extra = minimum_length - n_lowercase - n_uppercase - n_numbers - n_special
+if n_extra > 0:
+    extra = random.choices(LOWERCASE_CHARACTERS +
+                           UPPERCASE_CHARACTERS +
+                           NUMBER_CHARACTERS +
+                           SPECIAL_CHARACTERS,
+                           k = n_extra)
+else:
+    extra = []
+    
 all_characters = lower + upper + numbers + special + extra
 
 random.shuffle(all_characters)

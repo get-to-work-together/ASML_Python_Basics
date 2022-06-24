@@ -9,19 +9,28 @@ De gemeente verwelkomde haar 225.000e inwoner[2] op 24 november 2015. De stad gr
 
 
 # clean up
-# s = s.lower().replace('.', '').replace(',', '').replace('(', '').replace(')', '')
+
+##s = s.lower().replace('.', '').replace(',', '').replace('(', '').replace(')', '')
 
 # or
-# import string
 s = s.lower().translate(str.maketrans('', '', '.,(){}[]/\|#&'))
 
 # or
-# import re
-# s = re.sub(r'[^a-zA-Z0-9 ]', '', s)
+##import string
+##s = s.lower().translate(str.maketrans('', '', string.punctuation))
 
+# or
+##import re
+##s = re.sub(r'[^a-zA-Z ]', '', s.lower())
+
+# or
+##import re
+##words = re.split(' ,\.', s)
 
 
 words = s.split()
+
+
 
 unique_words = set(words)
 
@@ -30,16 +39,17 @@ for word in unique_words:
     n = words.count(word)
     d[word] = n
 
-for word, n in sorted(d.items()):
-   print(f'{word:20}: {n:3}')
-
-
-
-
-
-
 # or
 d = {word: words.count(word) for word in set(words)}
+
+
+for word, n in sorted(d.items()):
+   print(f'{word:20}: {n:3} {"*" * n}')
+
+
+
+
+
 
 # from operator import itemgetter
 # for word, n in sorted(d.items(), key = itemgetter(1, 0), reverse = True):

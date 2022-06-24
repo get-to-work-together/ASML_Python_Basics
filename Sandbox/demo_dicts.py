@@ -2,6 +2,17 @@
 
 d = {'nl': '+31', 'f': '+44', 'd': '+49', 'es': '+34'}
 
+print(d)
+
+print(d['f'])
+
+d['uk'] = '+40'
+print(d)
+
+d['uk'] = '+41'
+print(d)
+
+
 for k in sorted(d.keys()):
     print(k + ': ' + d[k])
 
