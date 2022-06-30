@@ -20,8 +20,8 @@ s = s.lower().translate(str.maketrans('', '', '.,(){}[]/\|#&'))
 ##s = s.lower().translate(str.maketrans('', '', string.punctuation))
 
 # or
-##import re
-##s = re.sub(r'[^a-zA-Z ]', '', s.lower())
+# import re
+# s = re.sub(r'[^a-zA-Z ]', '', s.lower())
 
 # or
 ##import re

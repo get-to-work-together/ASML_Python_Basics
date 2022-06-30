@@ -1,5 +1,20 @@
 class Car:
 
+    CLASS_NAME = 'Car'
+    VERSION = '1.0'
+
+    @staticmethod
+    def class_name():
+        return Car.CLASS_NAME
+
+    @staticmethod
+    def get_version():
+        return Car.VERSION
+
+    @staticmethod
+    def calculate_usage(amount_of_gas, number_of_kilometers):
+        return number_of_kilometers / amount_of_gas
+
     def __init__(self, make, model, color, mileage = 0):
         self._make = make
         self._model = model
@@ -39,13 +54,15 @@ class Car:
 # -------------------------------------------------------
 
 if __name__ == '__main__':
-    
+
     my_car = Car('Renault', 'Megane', 'metalic brown')
 
     my_car.start()
     my_car.drive(200)
 
     print(my_car)
+
+    print(Car.class_name())
 
 #    del my_car
 
