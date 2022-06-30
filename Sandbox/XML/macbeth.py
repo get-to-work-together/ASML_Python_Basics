@@ -8,7 +8,10 @@ tree = ET.parse(r'Macbeth.xml')
 root = tree.getroot()
 
 # print(root)
-#
+
+# for e1 in root:
+#     print(e1.tag)
+
 # for e1 in root:
 #     print(e1.tag)
 #     for e2 in e1:
@@ -33,9 +36,8 @@ scenes = root.findall('.//SCENE/TITLE')
 for s in scenes:
     print(s.text)
 
-
-
 sys.exit()
+
 
 
 print('\n------ SPEECHES BY DUNCAN -------------------------\n')
