@@ -44,8 +44,9 @@ class Processor:
             self.decimal = None
 
         elif key == '+/−':
-            self.invoer = -self.invoer
-            self.display = self.invoer
+            if self.invoer != 0:
+                self.invoer = -self.invoer
+                self.display = self.invoer
 
         elif key == '%':
             self.invoer = self.invoer / 100

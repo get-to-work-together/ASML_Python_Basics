@@ -1,5 +1,4 @@
 import tkinter as tk
-#from tkinter import ttk
 from functools import partial
 
 from processor import Processor
@@ -76,24 +75,15 @@ class CalculatorFrame(tk.Frame):
 
         self.buttons = []
         for d in buttons_settings:
-            # button = tk.Button(self,
-            #                    text = d['text'],
-            #                    command = partial(self.keypressed, d['text']),
-            #                    font = SMALLFONT,
-            #                    bd = 0,
-            #                    bg = 'systemTransparent',
-            #                    # bg = d['bg'],
-            #                    relief = 'flat',
-            #                    default = 'normal')
-            button = tk.Label(self,
-                              text = d['text'],
-                              font = SMALLFONT,
-                              bd = 0,
-                              borderwidth = 0,
-                              relief="solid",
-                              bg = d['bg'],
-                              fg = '#ededed')
-            button.bind("<Button-1>", lambda e, t = d['text']: self.keypressed(t))
+            button = tk.Button(self,
+                               text = d['text'],
+                               command = partial(self.keypressed, d['text']),
+                               font = SMALLFONT,
+                               bd = 0,
+                               bg = 'systemTransparent',
+                               # bg = d['bg'],
+                               relief = 'flat',
+                               default = 'normal')
             button.grid(column = d['column'],
                         row = d['row'],
                         sticky = tk.N + tk.E + tk.S + tk.W,
@@ -113,8 +103,6 @@ class CalculatorFrame(tk.Frame):
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.rowconfigure(0, weight = 1)
-        self.columnconfigure(0, weight = 1)
 
         self.title('Calculator')
         self.geometry('234x294')
