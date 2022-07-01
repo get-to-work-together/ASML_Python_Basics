@@ -1,6 +1,7 @@
-from tkinter import *
-from tkinter import ttk
+import tkinter as tk
 
-root = Tk()
-ttk.Button(root, text="Hello World").grid()
+root = tk.Tk()
+
+tk.Button(root, text="Hello World").grid()
+
 root.mainloop()
