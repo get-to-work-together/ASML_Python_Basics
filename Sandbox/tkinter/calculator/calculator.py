@@ -4,7 +4,7 @@ from functools import partial
 
 from processor import Processor
 
-LARGEFONT = ("Arial", 46)
+LARGEFONT = ("Helvetica", 46)
 SMALLFONT = ("Arial", 22)
 
 class CalculatorFrame(tk.Frame):
